@@ -5,10 +5,6 @@ const nextConfig: NextConfig = {
   env: {
     CUSTOM_KEY: process.env.CUSTOM_KEY || "default-value",
   },
-  i18n: {
-    locales: ["en", "fr"],
-    defaultLocale: "en",
-  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
